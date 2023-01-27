@@ -1,1 +1,13 @@
-<p>product works!</p>
+<div class="flex">
+    <img src="{{product.thumbnail_url !== null ? product.thumbnail_url : './assets/default_ticket.png'}}"  alt="product_image" class="w-1/5 rounded-md">
+    <div id="description" class="w-3/5 ml-2">
+        <h2 class="text-xl font-bold">{{product.label}}</h2>
+        <p class="text-sm mt-2 font-light">{{product.description}}</p>
+    </div>
+    <div class="flex flex-col w-1/5 justify-between text-end mr-2">
+        <span class="text-xl">{{product.price}}€</span>
+        <div>
+            <span class="cursor-pointer">Ajouter au panier</span>
+        </div>
+    </div>
+</div>

@@ -10,9 +10,9 @@ export class Category {
 
     constructor(obj: any) {
         this._id = obj.id;
-        this._index = obj._index;
-        this._label = obj._label;
-        this._description = obj._description;
+        this._index = obj.index;
+        this._label = obj.label;
+        this._description = obj.description;
     }
 
     public get id() {
@@ -20,14 +20,14 @@ export class Category {
     }
 
     public get label() {
-        return this._id;
+        return this._label;
     }
 
     public get index() {
-        return this._id;
+        return this._index;
     }
 
     public get description() {
-        return this._id;
+        return this._description;
     }
 }

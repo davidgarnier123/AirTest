@@ -31,7 +31,7 @@ export class Product {
         return this._description;
     }
     public get price () {
-        return this._price;
+        return this._price / 100;
     }
     public get category_id () {
         return this._category_id;

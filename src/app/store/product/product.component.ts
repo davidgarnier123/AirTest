@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from 'src/shared/models/product';
 
 @Component({
   selector: 'app-product',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.less']
 })
 export class ProductComponent {
-
+  @Input() product: any;
+  //public product: Product | undefined = undefined;
 }

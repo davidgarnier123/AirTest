@@ -1,1 +1,10 @@
-<p>header works!</p>
+<div id="headerContent" class="flex justify-between h-10 items-center pl-2 pr-2 bg-gray-700">
+    <div id="brand">
+        <h2 [routerLink]="['/']" class="cursor-pointer text-xl">AirTest</h2>
+    </div>
+    <div id="menu" class="flex justify-between lg:w-1/5 w-3/5">
+        <span [routerLink]="['/tickets']" class="cursor-pointer">Mes ticket</span>
+        <span [routerLink]="['/cart']" class="cursor-pointer">Panier</span>
+        <span>Langue</span>
+    </div>
+</div>

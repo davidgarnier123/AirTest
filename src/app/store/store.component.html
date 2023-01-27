@@ -1,1 +1,11 @@
-<p>store works!</p>
+<div id="storeContent" class="mt-4">
+    <div id="categories" class="flex flex-row w-3/5 mb-4 justify-between">
+        <span class="border p-2 rounded-md" (click)="filterBy(null)">Tous</span>
+        <span *ngFor="let category of categories" class="border p-2 rounded-md" (click)="filterBy(category)">{{category.label}}</span>
+    </div>
+    <div id="productsList" class="flex flex-col place-items-center">
+        <article *ngFor="let product of products" class="flex mb-2 border p-1 xl:w-3/5 rounded-md">
+            <app-product [product]="product"></app-product>
+        </article>
+    </div>
+</div>
