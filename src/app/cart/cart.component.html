@@ -1,1 +1,16 @@
-<p>cart works!</p>
+<div id="cartContent" class="text-white mt-6">
+    <h1 class="text-center text-xl mb-6">Mon panier</h1>
+    <div id="cart" *ngIf="_cartService.cart.length > 0">
+        <div id="product">
+                <app-product *ngFor="let product of _cartService.cart" [product]="product" [callback]="removeItem" [type]="'cart'" class="flex grow justify-center"></app-product>
+        </div>
+        <div id="total" class="flex grow justify-center mt-6">
+            <p class="mr-4">Total : </p>
+            <p class="mr-4">{{ getTotal() }}€</p>
+            <app-button [text]="'Paiement'" [callback]="goToPay" [type]="'payment'"></app-button>
+        </div>
+    </div>
+    <div id="cartEmpty" *ngIf="_cartService.cart.length === 0" class="flex grow justify-center">
+        <p>Votre panier est vide</p>
+    </div>
+</div>

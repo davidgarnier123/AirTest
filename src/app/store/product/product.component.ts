@@ -8,5 +8,10 @@ import { Product } from 'src/shared/models/product';
 })
 export class ProductComponent {
   @Input() product: any;
-  //public product: Product | undefined = undefined;
+  @Input() callback: any;
+  @Input() type: any;
+
+  public actionOnProduct = () => {
+    this.callback(this.product, this.type)
+  }
 }

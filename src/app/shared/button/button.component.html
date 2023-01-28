@@ -1,1 +1,6 @@
-<p>button works!</p>
+<div class="cursor-pointer w-fit p-2 bg-myOrange border border-2 border-transparent hover:border-white text-white rounded-md" (click)="callback()">
+    <p *ngIf="type === 'payment'">{{text}}     <i class="material-icons align-middle" *ngIf="type === 'payment'" matTooltip="Paiement">payments</i>
+    </p> 
+    <i class="material-icons align-middle" *ngIf="type === 'store'" matTooltip="Ajouter au panier">add_shopping_cart</i>
+    <i class="material-icons align-middle" *ngIf="type === 'cart'" matTooltip="Retirer du panier">delete</i>
+</div>

@@ -1,1 +1,10 @@
-<p>payment works!</p>
+<div id="payment" class="flex flex-col justify-center text-center w-full h-full bg-back_product text-white">
+    <div id="paymentProgress" *ngIf="inProgress">
+        <h1>Paiement en cours</h1>
+        <mat-spinner class="m-0 m-auto mt-6"></mat-spinner>
+    </div>
+    <div id="paymentSuccess" *ngIf="!inProgress">
+        <h1>Votre achat a été valide !</h1>
+        <p>Retrouvez vos tickets <a [routerLink]="['/tickets']" class="text-myLightOrange" (click)="closeModal()">ici</a> !</p>
+    </div>
+</div>

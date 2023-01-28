@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from 'src/shared/services/cart.service'; 
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent {
+
+  constructor (public _cartService: CartService) {
+
+  }
 
 }

@@ -1,11 +1,15 @@
-<div id="storeContent" class="mt-4">
-    <div id="categories" class="flex flex-row w-3/5 mb-4 justify-between">
-        <span class="border p-2 rounded-md" (click)="filterBy(null)">Tous</span>
-        <span *ngFor="let category of categories" class="border p-2 rounded-md" (click)="filterBy(category)">{{category.label}}</span>
+<div id="storeContent" class="mt-6">
+    <div id="categories" class="flex flex-row mb-6 justify-around flex-wrap	" *ngIf="categories.length > 0">
+        <span [ngClass]="{'bg-myOrange': selectedCategory === null}"
+            class="border p-2 rounded-md cursor-pointer duration-200 hover:bg-myOrange mr-2 bg-back_product text-white  mt-2"
+            (click)="filterBy(null)">Tous</span>
+        <span *ngFor="let category of categories" [ngClass]="{'bg-myOrange': selectedCategory === category}"
+            class="border p-2 rounded-md cursor-pointer duration-200 hover:bg-myOrange mr-2 bg-back_product text-white mt-2"
+            (click)="filterBy(category)">{{category.label}}</span>
     </div>
-    <div id="productsList" class="flex flex-col place-items-center">
-        <article *ngFor="let product of products" class="flex mb-2 border p-1 xl:w-3/5 rounded-md">
-            <app-product [product]="product"></app-product>
-        </article>
+    <div id="productsList" class="flex flex-col">
+
+        <app-product *ngFor="let product of products" [product]="product" [callback]="addCart" [type]="'store'"
+            class="flex grow justify-center"></app-product>
     </div>
 </div>

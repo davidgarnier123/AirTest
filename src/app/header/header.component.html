@@ -1,10 +1,10 @@
-<div id="headerContent" class="flex justify-between h-10 items-center pl-2 pr-2 bg-gray-700">
+<div id="headerContent" class="flex justify-between h-10 items-center pl-2 pr-2 bg-[#eb6f61] text-white">
     <div id="brand">
         <h2 [routerLink]="['/']" class="cursor-pointer text-xl">AirTest</h2>
     </div>
-    <div id="menu" class="flex justify-between lg:w-1/5 w-3/5">
-        <span [routerLink]="['/tickets']" class="cursor-pointer">Mes ticket</span>
-        <span [routerLink]="['/cart']" class="cursor-pointer">Panier</span>
-        <span>Langue</span>
+    <div id="menu" class="flex justify-between w-fit">
+        <span [routerLink]="['/tickets']" class="cursor-pointer"  class="cursor-pointer hover:text-back_product mr-6">Mes tickets</span>
+        <span [routerLink]="['/cart']" class="cursor-pointer" class="cursor-pointer hover:text-back_product mr-6"><i class="material-icons">shopping_cart</i> <span class="align-super">{{_cartService.cart.length}}</span></span>
+        <span class="cursor-pointer hover:text-back_product"><i class="material-icons">language</i></span>
     </div>
 </div>

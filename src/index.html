@@ -7,8 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+          colors: {
+            mainBack: '#26474E',
+            myOrange: '#F27438',
+            myLightOrange: '#F9968B',
+            white: 'white',
+            back_product: '#263336',
+          }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="bg-mainBack">
   <app-root></app-root>
 </body>
 </html>

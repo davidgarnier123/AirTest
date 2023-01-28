@@ -1,1 +1,9 @@
-<p>vault works!</p>
+<div id="vaultContent" class="flex grow justify-center flex-col text-white mt-6" >
+    <h1 class="text-center text-xl mb-6">Mes tickets</h1>
+    <div id="ticketsList">
+        <div id="ticket" *ngFor="let ticket of _vaultService.tickets">
+            {{ticket.label}}
+        </div>
+    </div>
+    <h2 class="text-center" *ngIf="_vaultService.tickets.length === 0">Vous n'avez pas de tickets</h2>
+</div>

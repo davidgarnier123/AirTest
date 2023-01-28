@@ -8,11 +8,11 @@ export class Ticket {
     // Ticket utilisé
     private _used: boolean;
 
-    constructor(obj: any) {
-        this._id = obj.id;
-        this._label = obj.label;
-        this._expiryAt = obj.expiryAt;
-        this._used = obj.used;
+    constructor(ticketID: string, ticketLabel: string, ticketExpiry: number, ticketUsed: boolean ) {
+        this._id = ticketID;
+        this._label = ticketLabel;
+        this._expiryAt = ticketExpiry;
+        this._used = ticketUsed;
     }
 
     public get id() {
