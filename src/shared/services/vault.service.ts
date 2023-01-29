@@ -8,15 +8,21 @@ import { Ticket } from '../models/ticket';
 export class VaultService {
 
   private _tickets: Array<Ticket> = [];
-  constructor() { }
+  constructor() { 
+  }
 
   public get tickets () {
     return this._tickets;
   }
 
   public addTicket = (product: Product) => {
-    console.log('add ticket !!');
-    console.log(product);
-    this._tickets.push(new Ticket('123', 'ticket unique', 1845126512, false))
+    // 1 = titre unitaire
+    // 3 = abonnements
+    // 2 = parking+transport
+    if (product.category_id === '3') {
+      this._tickets.push(new Ticket('123', product.label, 1680091674, false, 'abo'))
+    } else if (product.category_id === '1' || product.category_id === '2') {
+      this._tickets.push(new Ticket('123', product.label, 1680091674, false, 'ticket'))
+    }
   }
 }

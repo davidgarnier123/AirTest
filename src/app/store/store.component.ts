@@ -45,7 +45,7 @@ export class StoreComponent implements OnInit, OnDestroy {
 
   public filterBy = (category: Category | null) => {
     this.products = this._productsService.allProducts;
-    category ? (this.products = this.products.filter((product) => product.category_id === category.id), this.selectedCategory = category) : this.selectedCategory = null;
+    category ? (this.products = this.products.filter((product) => product.category_id === category.index.toString()), this.selectedCategory = category) : this.selectedCategory = null;
   }
 
   public addCart = (product: Product, type: string) => {

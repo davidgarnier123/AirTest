@@ -6,7 +6,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { VaultComponent } from './vault/vault.component';
 import { ButtonComponent } from './shared/button/button.component';
 import { ProductComponent } from './store/product/product.component';
 import { CartComponent } from './cart/cart.component';
+import { TicketDetailsComponent } from './vault/ticket-details/ticket-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { CartComponent } from './cart/cart.component';
     VaultComponent,
     ButtonComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    TicketDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { CartComponent } from './cart/cart.component';
     MatDialogModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

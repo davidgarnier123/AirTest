@@ -30,6 +30,7 @@ export class CartComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.height = "350px";
     dialogConfig.width = "600px";
+    dialogConfig.panelClass = ['customDialog'];
     const modalDialog = this.matDialog.open(PaymentComponent, dialogConfig);
   }
 

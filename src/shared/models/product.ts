@@ -33,6 +33,9 @@ export class Product {
     public get price () {
         return this._price / 100;
     }
+    public get priceFormated () {
+        return Number(this._price / 100).toLocaleString();
+    }
     public get category_id () {
         return this._category_id;
     }

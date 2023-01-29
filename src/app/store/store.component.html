@@ -1,10 +1,10 @@
 <div id="storeContent" class="mt-6">
-    <div id="categories" class="flex flex-row mb-6 justify-around flex-wrap	" *ngIf="categories.length > 0">
+    <div id="categories" class="flex flex-row mb-6 lg:justify-around w-auto lg:w-2/5 lg:m-0 lg:m-auto lg:mb-6" *ngIf="categories.length > 0">
         <span [ngClass]="{'bg-myOrange': selectedCategory === null}"
-            class="border p-2 rounded-md cursor-pointer duration-200 hover:bg-myOrange mr-2 bg-back_product text-white  mt-2"
+            class="border p-1 lg:p-2 rounded-md cursor-pointer duration-200 hover:bg-myOrange inline-flex min-h-2 items-center ml-0.5 mr-0.5 lg:mr-2 bg-back_product text-white  mt-2"
             (click)="filterBy(null)">Tous</span>
         <span *ngFor="let category of categories" [ngClass]="{'bg-myOrange': selectedCategory === category}"
-            class="border p-2 rounded-md cursor-pointer duration-200 hover:bg-myOrange mr-2 bg-back_product text-white mt-2"
+            class="border p-1 lg:p-2 rounded-md cursor-pointer duration-200 hover:bg-myOrange inline-flex min-h-2 items-center ml-0.5 mr-0.5 lg:mr-2 bg-back_product text-white mt-2"
             (click)="filterBy(category)">{{category.label}}</span>
     </div>
     <div id="productsList" class="flex flex-col">

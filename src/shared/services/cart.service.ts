@@ -24,8 +24,8 @@ export class CartService {
 
   public get total () {
     let total = 0;
-    this.cart.map( (product) => { total += product.price})
-    return total;
+    this.cart.map( (product) => { total += Number(product.price)})
+    return Number(total).toLocaleString();
   }
 
   public removeAllProducts = () => {

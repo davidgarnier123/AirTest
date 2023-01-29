@@ -4,10 +4,11 @@
         <div id="product">
                 <app-product *ngFor="let product of _cartService.cart" [product]="product" [callback]="removeItem" [type]="'cart'" class="flex grow justify-center"></app-product>
         </div>
-        <div id="total" class="flex grow justify-center mt-6">
-            <p class="mr-4">Total : </p>
-            <p class="mr-4">{{ getTotal() }}€</p>
-            <app-button [text]="'Paiement'" [callback]="goToPay" [type]="'payment'"></app-button>
+        <div id="checkout" class="flex flex-col grow justify-center m-0 m-auto mt-6 w-2/5">
+            <div id="price">
+                <p class="mr-4 text-center text-xl mb-4">Total : {{ getTotal()}}€</p>
+            </div>
+            <app-button class="m-0 m-auto" [text]="'Paiement'" [callback]="goToPay" [type]="'payment'"></app-button>
         </div>
     </div>
     <div id="cartEmpty" *ngIf="_cartService.cart.length === 0" class="flex grow justify-center">

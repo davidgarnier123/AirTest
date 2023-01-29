@@ -1,0 +1,10 @@
+<div id="ticketDetails" class="flex flex-col justify-between text-center w-full h-full bg-back_product text-white">
+    <div id="headerDesc" class="mt-2">
+        <h2 class="text-lg text-myLightOrange">{{ticket.label}}</h2>
+        <p class="text-sm text-textColor">Date d'expiration : {{ticket.expiryAtFormated}}</p>
+    </div>
+    <div class="flex justify-center pb-4">
+        <qrcode [qrdata]="ticket.label + ticket.expiryAt" [width]="256" [errorCorrectionLevel]="'M'" [colorLight]="'#FFFFFF'"></qrcode>
+
+    </div>
+</div>
