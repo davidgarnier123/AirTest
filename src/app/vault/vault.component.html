@@ -1,4 +1,4 @@
-<div id="vaultContent" class="flex grow justify-center flex-col text-white mt-6" >
+<div id="vaultContent" class="flex grow justify-center flex-col text-white m-0 m-auto mt-6 lg:w-3/5" >
     <h1 class="text-center text-xl mb-6">Mes tickets</h1>
     <div id="ticketsList" class="flex flex-col lg:flex-row justify-center">
         <div id="ticket" *ngFor="let ticket of _vaultService.tickets" class="flex m-0 m-auto mb-4 border p-1 lg:m-0 lg:mr-2 lg:w-2/5 h-fit lg:h-32 rounded-md duration-200 hover:border-myLightOrange bg-back_product" (click)="openTicket(ticket)">

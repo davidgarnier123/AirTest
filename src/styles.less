@@ -9,16 +9,20 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+//  Custom snackbar
 .customSnackBar {
     text-align: center;
+
     .mdc-snackbar__surface {
         background-color: #F9968B !important;
     }
+
     &.success {
         .mat-mdc-snack-bar-label {
-            color: white !important;
+            color: #263336 !important;
         }
     }
+
     &.error {
         .mat-mdc-snack-bar-label {
             color: orange !important;
@@ -26,12 +30,13 @@ body {
     }
 }
 
-
+// Custom dialog
 .customDialog .mat-mdc-dialog-surface {
     border-radius: 7px !important;
     background-color: transparent !important;
-  }
+}
 
+// Custom spinner
 .customSpinner circle {
     stroke: #F9968B !important;
-  }
+}

@@ -15,7 +15,13 @@ export class VaultService {
     return this._tickets;
   }
 
-  public addTicket = (product: Product) => {
+  /**
+   * @name addTicket
+   * @description create fake ticket
+   * @param product Product
+   * @returns void
+   */
+  public addTicket = (product: Product): void => {
     // 1 = titre unitaire
     // 3 = abonnements
     // 2 = parking+transport

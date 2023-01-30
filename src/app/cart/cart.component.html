@@ -2,7 +2,8 @@
     <h1 class="text-center text-xl mb-6">Mon panier</h1>
     <div id="cart" *ngIf="_cartService.cart.length > 0">
         <div id="product">
-                <app-product *ngFor="let product of _cartService.cart" [product]="product" [callback]="removeItem" [type]="'cart'" class="flex grow justify-center"></app-product>
+            <app-product *ngFor="let product of _cartService.cart" [product]="product" [callback]="removeItem"
+                [type]="'cart'" class="flex grow justify-center"></app-product>
         </div>
         <div id="checkout" class="flex flex-col grow justify-center m-0 m-auto mt-6 w-2/5">
             <div id="price">

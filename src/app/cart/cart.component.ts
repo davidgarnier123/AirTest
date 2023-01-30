@@ -18,15 +18,31 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public removeItem = (product: Product) => {
+  /**
+   * @function removeItem
+   * @param product Product
+   * @description call cart service to remove specific product
+   * @returns void
+   */
+  public removeItem = (product: Product): void => {
     this._cartService.removeProduct(product);
   }
 
-  public getTotal = () => {
+  /**
+   * @function getTotal
+   * @description return total of products in cart
+   * @returns string
+   */
+  public getTotal = (): string => {
     return this._cartService.total;
   }
 
-  public goToPay = () => {
+  /**
+   * @function goToPay
+   * @description open modal to show fake payment
+   * @returns void
+   */
+  public goToPay = (): void => {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.height = "350px";
     dialogConfig.width = "600px";

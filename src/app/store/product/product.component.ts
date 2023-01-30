@@ -12,6 +12,6 @@ export class ProductComponent {
   @Input() type: any;
 
   public actionOnProduct = () => {
-    this.callback(this.product, this.type)
+    this.callback(this.product)
   }
 }

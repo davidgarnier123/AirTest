@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CartService } from 'src/shared/services/cart.service'; 
+import { CartService } from 'src/shared/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { CartService } from 'src/shared/services/cart.service';
 })
 export class HeaderComponent {
 
-  constructor (public _cartService: CartService) {
+  constructor(public _cartService: CartService) {
 
   }
 

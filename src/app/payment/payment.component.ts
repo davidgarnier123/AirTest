@@ -18,7 +18,12 @@ export class PaymentComponent implements OnInit {
     this.fakePayment();
   }
 
-  private fakePayment = () => {
+  /**
+   * @function fakePayment
+   * @description simulate payment loading using setTimeout, remove products in cart + add tickets in vault
+   * @returns void
+   */
+  private fakePayment = (): void => {
     setTimeout(() => {
       this.inProgress = !this.inProgress;
       this._cartService.cart.map( (product) => {
@@ -28,7 +33,12 @@ export class PaymentComponent implements OnInit {
     }, 5000);
   }
 
-  public closeModal = () => {
+  /**
+   * @function closeModal
+   * @description close modal itself
+   * @returns void
+   */
+  public closeModal = (): void => {
     this.dialogRef.close();
   }
 

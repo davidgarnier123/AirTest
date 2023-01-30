@@ -14,8 +14,13 @@ export class VaultComponent {
   constructor(public _vaultService: VaultService, public matDialog: MatDialog) {
 
   }
-
-  public openTicket = (ticket: Ticket) => {
+  /**
+   * @function openTicket
+   * @description open modal to show fake ticket details
+   * @param ticket Ticket
+   * @returns void
+   */
+  public openTicket = (ticket: Ticket): void => {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.height = "350px";
     dialogConfig.width = "600px";
