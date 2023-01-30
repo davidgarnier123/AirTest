@@ -1,7 +1,5 @@
 # Version en ligne
-```
-https://daga123-airtest.web.app/
-```
+[https://daga123-airtest.web.app/](https://daga123-airtest.web.app/)
 # Installation en local
 ## Etape Optionnelle
 Ce projet a été réalisé avec le framework Angular 15, il est nécessaire d'installer celui-ci : https://angular.io/guide/setup-local
